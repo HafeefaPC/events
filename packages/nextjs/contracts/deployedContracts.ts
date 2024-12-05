@@ -4,6 +4,287 @@
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  31337: {
+    EventStorage: {
+      address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      abi: [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "bytes32",
+              name: "eventId",
+              type: "bytes32",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "eventType",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "location",
+              type: "string",
+            },
+          ],
+          name: "EventCreated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "bytes32",
+              name: "eventId",
+              type: "bytes32",
+            },
+          ],
+          name: "EventUpdated",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "_eventType",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_location",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "_timeFrom",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "_timeTo",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "_date",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "_foodTypes",
+              type: "string",
+            },
+          ],
+          name: "createEvent",
+          outputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "eventIds",
+          outputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "events",
+          outputs: [
+            {
+              internalType: "address",
+              name: "organizer",
+              type: "address",
+            },
+            {
+              internalType: "string",
+              name: "eventType",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "location",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "timeFrom",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "timeTo",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "date",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "foodTypes",
+              type: "string",
+            },
+            {
+              internalType: "bool",
+              name: "exists",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getAllEventIds",
+          outputs: [
+            {
+              internalType: "bytes32[]",
+              name: "",
+              type: "bytes32[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "_eventId",
+              type: "bytes32",
+            },
+          ],
+          name: "getEvent",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "address",
+                  name: "organizer",
+                  type: "address",
+                },
+                {
+                  internalType: "string",
+                  name: "eventType",
+                  type: "string",
+                },
+                {
+                  internalType: "string",
+                  name: "location",
+                  type: "string",
+                },
+                {
+                  internalType: "uint256",
+                  name: "timeFrom",
+                  type: "uint256",
+                },
+                {
+                  internalType: "uint256",
+                  name: "timeTo",
+                  type: "uint256",
+                },
+                {
+                  internalType: "uint256",
+                  name: "date",
+                  type: "uint256",
+                },
+                {
+                  internalType: "string",
+                  name: "foodTypes",
+                  type: "string",
+                },
+                {
+                  internalType: "bool",
+                  name: "exists",
+                  type: "bool",
+                },
+              ],
+              internalType: "struct EventStorage.Event",
+              name: "",
+              type: "tuple",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "_eventId",
+              type: "bytes32",
+            },
+            {
+              internalType: "string",
+              name: "_eventType",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_location",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "_timeFrom",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "_timeTo",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "_date",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "_foodTypes",
+              type: "string",
+            },
+          ],
+          name: "updateEvent",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+    },
+  },
+} as const;
 
 export default deployedContracts satisfies GenericContractsDeclaration;
